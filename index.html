@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#ff6fae">
+<title>A Little Something for You 💗</title>
+<style>
+:root{--pink:#ff5da2;--rose:#ff8fbd;--pale:#fff0f7;--deep:#9d285f;--ink:#55243d}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:ui-rounded,"Trebuchet MS",system-ui,sans-serif;color:var(--ink);background:linear-gradient(145deg,#fff5fa 0%,#ffe0ee 42%,#ffd1e5 100%);overflow-x:hidden}
+button{font:inherit;cursor:pointer;border:0}.hero{min-height:100svh;display:grid;place-items:center;text-align:center;padding:30px 20px;position:relative;isolation:isolate;overflow:hidden;background:radial-gradient(ellipse at 50% 45%,#fff 0%,#ffe7f2 35%,#ffc5df 100%)}
+.hero:before,.hero:after{content:"";position:absolute;border-radius:50%;filter:blur(2px);z-index:-1}.hero:before{width:280px;height:280px;background:#ff9ecb66;top:-80px;left:-100px}.hero:after{width:330px;height:330px;background:#f9a4d366;right:-130px;bottom:-100px}
+.hero-inner{max-width:650px;animation:rise 1s ease both}.eyebrow{letter-spacing:.18em;text-transform:uppercase;font-size:.72rem;color:#b3487a;font-weight:800}.glow-heart{font-size:clamp(5rem,24vw,9rem);line-height:1;margin:18px auto;display:block;filter:drop-shadow(0 0 14px #ff5da2aa);animation:heartbeat 1.7s infinite}.hero h1{font-size:clamp(2.2rem,8vw,4.5rem);line-height:1.04;margin:12px 0;color:#9c2c61}.hero p{font-size:1.05rem;line-height:1.7;max-width:470px;margin:18px auto 26px;color:#79435c}.pill{border-radius:999px;padding:14px 24px;background:linear-gradient(100deg,#ff5da2,#ff8fb8);color:white;font-weight:800;box-shadow:0 10px 25px #e94e9860;transition:transform .2s,box-shadow .2s}.pill:hover{transform:translateY(-3px);box-shadow:0 14px 30px #e94e9870}.soft-btn{background:#fff8fc;color:#a52d65;border:1px solid #ffc2dc}.section{padding:76px 18px;max-width:1050px;margin:auto}.section-head{text-align:center;margin-bottom:30px}.section-head .eyebrow{margin-bottom:8px}.section h2{font-size:clamp(1.8rem,6vw,3rem);margin:8px 0;color:#9c2c61}.section-head p{color:#80526a;line-height:1.6}.tree-wrap{position:relative;min-height:410px;display:grid;place-items:center;overflow:hidden;border-radius:30px;background:linear-gradient(145deg,#fff8fcaa,#ffd6e8aa);border:1px solid #fff9;box-shadow:0 18px 50px #c94e8420}.tree{position:relative;width:min(88vw,420px);height:390px}.trunk{position:absolute;width:15px;height:165px;background:linear-gradient(90deg,#9e5b56,#d18b79);left:calc(50% - 7px);bottom:28px;border-radius:10px;transform-origin:bottom;animation:sway 4s ease-in-out infinite}.branch{position:absolute;width:9px;height:100px;background:#b9756d;border-radius:12px;bottom:145px;left:50%;transform-origin:bottom}.branch.b1{transform:rotate(-38deg)}.branch.b2{transform:rotate(38deg)}.branch.b3{height:78px;transform:rotate(-64deg);bottom:180px}.branch.b4{height:78px;transform:rotate(64deg);bottom:180px}
+.leaf-heart{position:absolute;width:44px;height:44px;display:grid;place-items:center;font-size:27px;filter:drop-shadow(0 4px 6px #d63c7c40);animation:floaty 3s ease-in-out infinite}.leaf-heart:nth-child(odd){animation-delay:-1.3s}.leaf-heart:nth-child(3n){font-size:34px}.ground{position:absolute;bottom:19px;left:18%;right:18%;height:14px;border-radius:50%;background:#b45d8a22;filter:blur(5px)}
+.note{margin:26px auto 0;max-width:650px;text-align:center;line-height:1.8;color:#75435b}.gallery{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:15px}.photo-card{padding:10px;background:#fffafc;border-radius:18px;box-shadow:0 12px 30px #b83e7619;transform:rotate(var(--tilt,0deg));transition:transform .25s}.photo-card:hover{transform:translateY(-5px) rotate(0)}.photo-card img{width:100%;aspect-ratio:4/5;object-fit:cover;display:block;border-radius:12px;background:linear-gradient(135deg,#ffd6e8,#fff1f7)}.photo-card figcaption{text-align:center;padding:11px 4px 4px;font-size:.88rem;color:#9b3b69}.placeholder{width:100%;aspect-ratio:4/5;display:grid;place-items:center;text-align:center;padding:12px;border-radius:12px;background:linear-gradient(145deg,#ffd6e8,#fff7fb);color:#b3487a}.placeholder span{font-size:2rem;display:block}.letter-area{text-align:center;padding:20px 0 80px}.envelope{max-width:650px;margin:0 auto;background:linear-gradient(135deg,#fffafd,#ffe4f0);border:1px solid #fff;border-radius:28px;padding:28px 20px;box-shadow:0 18px 55px #b83e7624}.envelope-icon{font-size:3.2rem;animation:floaty 3s ease-in-out infinite}.letter{display:none;text-align:left;max-width:520px;margin:22px auto 0;background:#fffdfd;padding:24px;border-radius:16px;border:1px solid #ffe1ed;line-height:1.9;white-space:pre-line;box-shadow:inset 0 0 30px #ffecf4}.letter.show{display:block;animation:rise .65s ease both}.letter-sign{font-family:Georgia,serif;font-style:italic;color:#b3487a;font-size:1.2rem}.footer{text-align:center;padding:22px;color:#9c5a78;font-size:.85rem}.music-toggle{position:fixed;right:14px;bottom:14px;z-index:5;border-radius:999px;padding:12px 15px;background:#fff9;color:#a52d65;border:1px solid #ffc4dd;box-shadow:0 6px 20px #8f31501c;backdrop-filter:blur(10px)}.heart-rain{position:fixed;inset:0;pointer-events:none;overflow:hidden;z-index:4}.float-heart{position:absolute;bottom:-35px;opacity:0;animation:drift linear forwards;color:#ff5da2;text-shadow:0 0 12px #fff}.reveal{opacity:0;transform:translateY(18px);transition:opacity .7s,transform .7s}.reveal.visible{opacity:1;transform:none}
+@keyframes heartbeat{0%,100%{transform:scale(1)}8%{transform:scale(1.09)}16%{transform:scale(1)}24%{transform:scale(1.06)}32%{transform:scale(1)}}@keyframes rise{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}@keyframes floaty{0%,100%{translate:0 0}50%{translate:0 -9px}}@keyframes sway{0%,100%{transform:rotate(-1deg)}50%{transform:rotate(1deg)}}@keyframes drift{0%{transform:translateY(0) translateX(0) rotate(0);opacity:0}10%{opacity:.85}100%{transform:translateY(-110vh) translateX(var(--drift,30px)) rotate(35deg);opacity:0}}
+@media(max-width:600px){.section{padding:58px 16px}.gallery{grid-template-columns:repeat(2,minmax(0,1fr));gap:11px}.photo-card{padding:7px}.photo-card figcaption{font-size:.78rem}.tree-wrap{min-height:360px}.tree{transform:scale(.88);transform-origin:center}.hero p{font-size:1rem}.envelope{padding:24px 15px}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important;transition:none!important}}
+</style>
+</head>
+<body>
+<div class="heart-rain" id="heartRain" aria-hidden="true"></div>
+<section class="hero" id="top">
+  <div class="hero-inner">
+    <div class="eyebrow">A little surprise, made with love</div>
+    <span class="glow-heart" aria-hidden="true">💗</span>
+    <h1>Hey, <span id="recipientName">My Favourite Person</span>...</h1>
+    <p>I made a tiny corner of the internet just for you. Take a little breath, turn the sound on if you like, and explore. 🌷</p>
+    <button class="pill" id="startBtn">Open your surprise ✨</button>
+  </div>
+</section>
+<main id="mainContent" hidden>
+  <section class="section reveal">
+    <div class="section-head"><div class="eyebrow">A little garden of feelings</div><h2>Growing thoughts of you 🌸</h2><p>Some feelings are too lovely to keep in one little heart.</p></div>
+    <div class="tree-wrap"><div class="tree" id="heartTree" aria-label="An animated tree decorated with hearts"><div class="trunk"></div><div class="branch b1"></div><div class="branch b2"></div><div class="branch b3"></div><div class="branch b4"></div><div class="ground"></div></div></div>
+    <p class="note">If every sweet thought about you became a little heart, I think this tree would still keep growing. 💞</p>
+  </section>
+  <section class="section reveal" id="memories">
+    <div class="section-head"><div class="eyebrow">Little moments, big feelings</div><h2>Our little gallery 📸</h2><p>Replace these sample cards with your favourite photos and captions.</p></div>
+    <div class="gallery" id="gallery">
+      <figure class="photo-card" style="--tilt:-1.5deg"><img src="assets/photos/memory1.jpeg" alt="Photo memory 1" loading="lazy"><figcaption>A little moment I wanted to keep 💗</figcaption></figure>
+      <figure class="photo-card" style="--tilt:1.2deg"><img src="assets/photos/memory2.jpeg" alt="Photo memory 2" loading="lazy"><figcaption>One of your lovely looks 🌷</figcaption></figure>
+      <figure class="photo-card" style="--tilt:-0.8deg"><img src="assets/photos/memory3.jpeg" alt="Photo memory 3" loading="lazy"><figcaption>A memory that makes me smile ✨</figcaption></figure>
+      <figure class="photo-card" style="--tilt:1.7deg"><img src="assets/photos/memory4.jpeg" alt="Photo memory 4" loading="lazy"><figcaption>A little favourite of mine 💞</figcaption></figure>
+      <figure class="photo-card" style="--tilt:-1.0deg"><img src="assets/photos/memory5.jpeg" alt="Photo memory 5" loading="lazy"><figcaption>Your smile, my happy place 🌸</figcaption></figure>
+      <figure class="photo-card" style="--tilt:0.8deg"><img src="assets/photos/memory6.jpeg" alt="Photo memory 6" loading="lazy"><figcaption>A moment worth remembering 💌</figcaption></figure>
+      <figure class="photo-card" style="--tilt:-1.2deg"><img src="assets/photos/memory7.jpeg" alt="Photo memory 7" loading="lazy"><figcaption>Just you being you 🫶</figcaption></figure>
+      <figure class="photo-card" style="--tilt:1.1deg"><img src="assets/photos/memory8.jpeg" alt="Photo memory 8" loading="lazy"><figcaption>Another page in our memory book 💖</figcaption></figure>
+      <figure class="photo-card" style="--tilt:-0.6deg"><img src="assets/photos/memory9.jpeg" alt="Photo memory 9" loading="lazy"><figcaption>A soft little memory 🌙</figcaption></figure>
+      <figure class="photo-card" style="--tilt:1.4deg"><img src="assets/photos/memory10.jpeg" alt="Photo memory 10" loading="lazy"><figcaption>More lovely moments to come 💗</figcaption></figure>
+    </div></div><figcaption>One of my favourite memories</figcaption></figure>
+      <figure class="photo-card" style="--tilt:1.2deg"><div class="placeholder"><div><span>🫶</span>Add photo 2</div></div><figcaption>A moment I want to keep</figcaption></figure>
+      <figure class="photo-card" style="--tilt:-.8deg"><div class="placeholder"><div><span>✨</span>Add photo 3</div></div><figcaption>You make it feel special</figcaption></figure>
+      <figure class="photo-card" style="--tilt:1.7deg"><div class="placeholder"><div><span>💗</span>Add photo 4</div></div><figcaption>A tiny piece of happiness</figcaption></figure>
+      <figure class="photo-card" style="--tilt:-1deg"><div class="placeholder"><div><span>🌙</span>Add photo 5</div></div><figcaption>One for the memory box</figcaption></figure>
+      <figure class="photo-card" style="--tilt:.8deg"><div class="placeholder"><div><span>💌</span>Add photo 6</div></div><figcaption>More lovely moments to come</figcaption></figure>
+    </div>
+  </section>
+  <section class="section letter-area reveal" id="letterSection">
+    <div class="section-head"><div class="eyebrow">From my heart to yours</div><h2>A little letter 💌</h2><p>There are a few things I wanted to say properly.</p></div>
+    <div class="envelope">
+      <div class="envelope-icon">💌</div>
+      <p>Ready to open a little note made just for you?</p>
+      <button class="pill" id="letterBtn">Open my letter 💗</button>
+      <article class="letter" id="letter">
+        Hey, <span id="letterName">my favourite person</span> 💗
+
+        I don’t always know the perfect words, but I wanted you to know that you bring a special kind of happiness into my days. The little conversations, the silly moments, and simply being able to think of you mean more than I can explain.
+
+        I made this page because some feelings deserve a little extra effort. I hope it makes you smile, even if just for a moment.
+
+        Thank you for being you. Whatever you feel, I want you to know that your comfort and happiness matter to me, and there’s no pressure to answer anything before you’re ready.
+
+        <span class="letter-sign">With lots of warmth,</span>
+        <span class="letter-sign" id="senderName">Someone who cares about you ♡</span>
+      </article>
+    </div>
+  </section>
+</main>
+<footer class="footer">Made with a little courage and a lot of 💗</footer>
+<button class="music-toggle" id="musicBtn" aria-label="Toggle background music">♫ Play music</button>
+<audio id="bgMusic" loop preload="none"><source src="assets/music/romantic.mp3" type="audio/mpeg"></audio>
+<script>
+/* EDIT THESE THREE VALUES */
+const RECIPIENT_NAME = "My Favourite Person"; // Replace with their name
+const SENDER_NAME = "Someone who cares about you"; // Replace with your name
+const MUSIC_FILE = "assets/music/romantic.mp3"; // Uploaded romantic track is included in the ZIP
+
+document.title = `A Little Something for ${RECIPIENT_NAME} 💗`;
+document.getElementById("recipientName").textContent = RECIPIENT_NAME;
+document.getElementById("letterName").textContent = RECIPIENT_NAME;
+document.getElementById("senderName").textContent = SENDER_NAME + " ♡";
+const audio = document.getElementById("bgMusic");
+audio.querySelector("source").src = MUSIC_FILE;
+audio.load();
+
+const tree = document.getElementById("heartTree");
+const heartPositions = [
+ [44,5],[30,10],[56,11],[18,19],[39,18],[64,20],[27,28],[49,29],[73,31],
+ [11,38],[34,39],[57,40],[80,42],[22,49],[45,50],[67,51],[34,60],[55,61]
+];
+heartPositions.forEach((pos,i)=>{const el=document.createElement("span");el.className="leaf-heart";el.textContent=["💗","💖","💕","💘","💓"][i%5];el.style.left=pos[0]+"%";el.style.top=pos[1]+"%";el.style.animationDelay=(-Math.random()*3)+"s";tree.appendChild(el)});
+
+const rain=document.getElementById("heartRain");
+function heartBurst(count=18){for(let i=0;i<count;i++){const h=document.createElement("span");h.className="float-heart";h.textContent=["♥","♡","💗","💕"][Math.floor(Math.random()*4)];h.style.left=Math.random()*100+"%";h.style.fontSize=(14+Math.random()*22)+"px";h.style.setProperty("--drift",(Math.random()*150-75)+"px");h.style.animationDuration=(4+Math.random()*4)+"s";rain.appendChild(h);setTimeout(()=>h.remove(),8500)}}
+setInterval(()=>{if(!document.hidden)heartBurst(2)},1800);
+
+document.getElementById("startBtn").addEventListener("click",()=>{document.getElementById("mainContent").hidden=false;document.getElementById("mainContent").scrollIntoView({behavior:"smooth"});heartBurst(28);document.querySelectorAll(".reveal").forEach(el=>observer.observe(el));});
+const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add("visible");observer.unobserve(entry.target)}}),{threshold:.12});
+document.querySelectorAll(".reveal").forEach(el=>observer.observe(el));
+document.getElementById("letterBtn").addEventListener("click",()=>{const letter=document.getElementById("letter");letter.classList.toggle("show");document.getElementById("letterBtn").textContent=letter.classList.contains("show")?"Close my letter 💗":"Open my letter 💗";if(letter.classList.contains("show")){heartBurst(20);setTimeout(()=>letter.scrollIntoView({behavior:"smooth",block:"center"}),120)}});
+const musicBtn=document.getElementById("musicBtn");
+musicBtn.addEventListener("click",async()=>{try{if(audio.paused){await audio.play();musicBtn.textContent="♫ Pause music"}else{audio.pause();musicBtn.textContent="♫ Play music"}}catch(e){musicBtn.textContent="Add MP3 to play ♫";alert("Add your own MP3 as assets/music/romantic.mp3, then reload the page.")}});
+</script>
+</body>
+</html>

@@ -1,0 +1,1 @@
+Put your own photos in this folder, then edit the gallery in index.html. See README.txt.
